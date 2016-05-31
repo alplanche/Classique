@@ -1,0 +1,5 @@
+C:\Users\guillaume\Documents\programme\Classique\IHM\Metier\bin\Debug\Metier.dll
+C:\Users\guillaume\Documents\programme\Classique\IHM\Metier\bin\Debug\Metier.pdb
+C:\Users\guillaume\Documents\programme\Classique\IHM\Metier\obj\Debug\Metier.dll
+C:\Users\guillaume\Documents\programme\Classique\IHM\Metier\obj\Debug\Metier.pdb
+C:\Users\guillaume\Documents\programme\Classique\IHM\Metier\obj\Debug\Metier.csprojResolveAssemblyReference.cache

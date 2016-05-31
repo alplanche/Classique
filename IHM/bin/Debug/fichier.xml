@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCompositeurMetier xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Metier">
+  <CompositeurMetier>
+    <CheminImage>BeethovenPic.jpg</CheminImage>
+    <DateDeces>0001-01-01T00:00:00</DateDeces>
+    <DateNaissance>0001-01-01T00:00:00</DateNaissance>
+    <Description>personne
+qui n'a pas existé</Description>
+    <Nom>machin</Nom>
+    <Oeuvres>aucune</Oeuvres>
+    <Prenom>truc</Prenom>
+  </CompositeurMetier>
+  <CompositeurMetier>
+    <CheminImage>BeethovenPic.jpg</CheminImage>
+    <DateDeces>2016-05-31T00:00:00+02:00</DateDeces>
+    <DateNaissance>2016-05-31T18:43:14.7949486+02:00</DateNaissance>
+    <Description>personne
+qui n'a pas vraiment existé</Description>
+    <Nom>bidule</Nom>
+    <Oeuvres>aucune</Oeuvres>
+    <Prenom>chouette</Prenom>
+  </CompositeurMetier>
+</ArrayOfCompositeurMetier>
