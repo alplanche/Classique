@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM.Views"
+        xmlns:converter="clr-namespace:IHM.Converter"
         mc:Ignorable="d"
         Title="MainWindow"  Height="550" Width="525">
+    <Window.Resources>
+        <converter:String2UriConverter x:Key="string2UriConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -64,14 +68,14 @@
                 <TextBox Grid.Row="2" Grid.Column="1" Margin="0,3,5,3" Text="{Binding SelectedCompositeur.DateNaissance}"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Margin="0,3,5,3" Text="{Binding SelectedCompositeur.DateDeces}"/>
             </Grid>
-            <Image Name="Salut" Grid.Row="0" Grid.Column="1" Margin="5" Source="{Binding SelectedCompositeur.CheminImage}" />
+            <Image Name="Salut" Grid.Row="0" Grid.Column="1" Margin="5" Source="{Binding SelectedCompositeur.CheminImage, Converter={StaticResource string2UriConverter}}" />
 
             <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  AcceptsReturn="True"  Margin="5" AcceptsTab="True" TextWrapping="WrapWithOverflow" Text="{Binding SelectedCompositeur.Description}"/>
 
 
         </Grid>
-        <Button Name="b1" Grid.Row="3" Grid.Column="0" Margin="5" Height="40" Width="100" HorizontalAlignment="Right">Ajouter</Button>
-        <Button Name="b2" Grid.Row="3" Grid.Column="1" Margin="5" Height="40" Width="100" HorizontalAlignment="Center">Editer</Button>
-        <Button Name="b3" Grid.Row="3" Grid.Column="2" Margin="5" Height="40" Width="100" HorizontalAlignment="Left">Supprimer</Button>
+        <Button Name="b1" Grid.Row="3" Grid.Column="0" Margin="5" Height="40" Width="100" HorizontalAlignment="Right" Command="{Binding AjouterCommand}">Ajouter</Button>
+        <Button Name="b2" Grid.Row="3" Grid.Column="1" Margin="5" Height="40" Width="100" HorizontalAlignment="Center" Command="{Binding EditerCommand}">Editer</Button>
+        <Button Name="b3" Grid.Row="3" Grid.Column="2" Margin="5" Height="40" Width="100" HorizontalAlignment="Left" Command="{Binding SupprimerCommand}">Supprimer</Button>
     </Grid>
 </Window>

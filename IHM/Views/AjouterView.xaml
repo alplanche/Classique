@@ -1,0 +1,63 @@
+﻿<Window x:Class="IHM.Views.AjouterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IHM.Views"
+        mc:Ignorable="d"
+        Title="AjouterView" Height="375" Width="350" MinHeight="375" MinWidth="350" MaxWidth="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Content="Nom :"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="3,3,5,3"/>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Content="Prenom :"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="3,3,5,3"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Content="Date de naissance :"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="3,3,5,3"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Content="Date de décès :"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="3,3,5,3"/>
+        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Oeuvres majeures :"/>
+        <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,3,5,3"/>
+        <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Description :"/>
+        <TextBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,3,5,3"/>
+        <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Content="Photo :"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="3,3,5,3"/>
+            <Button Grid.Row="0" Grid.Column="2"  Content="Parcourir" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Content="Valider" Margin="5" Height="40" Width="100" HorizontalAlignment="Right"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="Annuler" Margin="5" Height="40" Width="100" HorizontalAlignment="Left"/>
+        </Grid>
+    </Grid>
+</Window>

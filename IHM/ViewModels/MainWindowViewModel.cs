@@ -1,5 +1,6 @@
 ﻿using IHM.Factory;
 using IHM.Models;
+using IHM.Views;
 using Library;
 using Metier;
 using System;
@@ -43,6 +44,8 @@ namespace IHM.ViewModels
                 _SelectedCompositeur = value;
                 NotifyPropertyChanged("ListeCompo");
                 NotifyPropertyChanged("SelectedCompositeur");
+                EditerCommand.RaiseCanExecuteChanged();
+                SupprimerCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -73,7 +76,9 @@ namespace IHM.ViewModels
 
         private void Editer(object o)
         {
-
+            EditerView fen = new EditerView(SelectedCompositeur);
+            fen.ShowDialog();
+            
         }
 
         private bool CanEditer(object o)
@@ -105,12 +110,15 @@ namespace IHM.ViewModels
 
         #endregion
 
-        DataManager dataManager;
+        private DataManager dataManager;
 
         public MainWindowViewModel()
         {
             dataManager = new DataManager();
             ListeCompo = CompositeurFactory.ConvertAllCompositeur(dataManager.ListeCompo);
+            AjouterCommand = new DelegateCommand(Ajouter);
+            EditerCommand = new DelegateCommand(Editer, CanEditer);
+            SupprimerCommand = new DelegateCommand(Supprimer, CanSupprimer);
         }
     }
 }

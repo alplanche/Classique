@@ -16,6 +16,8 @@ namespace Metier
             Charger();
         }
 
+        public event EventHandler miseAJour;
+
         private List<CompositeurMetier> listeCompo;
 
         public List<CompositeurMetier> ListeCompo
@@ -28,18 +30,28 @@ namespace Metier
             set
             {
                 listeCompo = value;
+                miseAJour(this, EventArgs.Empty);
             }
         }
 
         public void Ajouter(CompositeurMetier c)
         {
             listeCompo.Add(c);
+            miseAJour(this, EventArgs.Empty);
 
         }
 
         public void Supprimer(CompositeurMetier c)
         {
             listeCompo.Remove(c);
+            miseAJour(this, EventArgs.Empty);
+        }
+
+        public void Modifier(CompositeurMetier avant, CompositeurMetier apres)
+        {
+            listeCompo.Remove(avant);
+            listeCompo.Add(apres);
+            miseAJour(this, EventArgs.Empty);
         }
 
         public void Enregister()

@@ -12,7 +12,8 @@ namespace IHM.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new Uri(string.Format("\\sauvegarde\\Images\\{0}", value as string));
+            var truc = new Uri(string.Format("\\sauvegarde\\Images\\{0}", value as string), UriKind.Relative);
+            return truc;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -56,9 +56,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converter\String2UriConverter.cs" />
+    <Compile Include="Event\AjouterEvent.cs" />
     <Compile Include="Factory\CompositeurFactory.cs" />
     <Compile Include="Models\CompositeurIHM.cs" />
+    <Compile Include="ViewModels\AjouterViewModel.cs" />
+    <Compile Include="ViewModels\EditerViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\AjouterView.xaml.cs">
+      <DependentUpon>AjouterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditerView.xaml.cs">
+      <DependentUpon>EditerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -66,6 +75,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AjouterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

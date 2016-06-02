@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\guillaume\Documents\programme\Classique\IHM\IHM\obj\Debug\
+C:\Users\guillaume\Documents\Classique\IHM\obj\Debug\
 IHM
 none
 false
 DEBUG;TRACE
-C:\Users\guillaume\Documents\programme\Classique\IHM\IHM\App.xaml
-11892971807
+C:\Users\guillaume\Documents\Classique\IHM\App.xaml
+3-458274582
 
-91187415684
-1574493245
-Views\MainWindow.xaml;
+121347791121
+15-246422419
+Views\AjouterView.xaml;Views\EditerView.xaml;Views\MainWindow.xaml;
 
-False
+True
 

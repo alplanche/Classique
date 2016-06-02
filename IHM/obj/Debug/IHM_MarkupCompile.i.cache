@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\guillaume\Documents\Classique\IHM\App.xaml
-11892971807
+3-458274582
 
-13-1947073403
+18111547768
 15-246422419
-Views\MainWindow.xaml;
+Views\AjouterView.xaml;Views\EditerView.xaml;Views\MainWindow.xaml;
 
-True
+False
 

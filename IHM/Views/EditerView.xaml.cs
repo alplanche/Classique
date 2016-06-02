@@ -1,5 +1,5 @@
-﻿using IHM.ViewModels;
-using Metier;
+﻿using IHM.Models;
+using IHM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,20 +17,22 @@ using System.Windows.Shapes;
 namespace IHM.Views
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Editerview.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditerView : Window
     {
-        public MainWindowViewModel ViewModel
+        public EditerViewModel ViewModel
         {
-            get; set;
+            get;
+            set;
         }
 
-        public MainWindow()
+        public EditerView(CompositeurIHM c)
         {
             InitializeComponent();
-            ViewModel = new MainWindowViewModel();
+            ViewModel = new EditerViewModel(c);
             DataContext = ViewModel;
+
         }
     }
 }
